@@ -41,7 +41,7 @@ bash android-studio-cc-auto-patch.sh
 
 如果你使用的是其他操作系统，则需要手动下载jar包执行：
 1. 首先备份Android Studio安装目录下的plugins/android/lib/sdk-common.jar文件，在使用增量更新方式时需要先恢复此文件到原始状态
-2. 下载jar包，[https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar](https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar)
+2. 下载jar包
 3. 执行命令`java -jar android-studio-cc-patch.jar <你的sdk-common.jar文件绝对路径>`
 4. 重启Android Studio
 
