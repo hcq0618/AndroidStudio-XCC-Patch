@@ -61,8 +61,9 @@ To restore the original state, execute this script again to add the -u parameter
 
 If you are using another operating system, you will need to manually download the jar to execute:
 
-First, backup the plugins/ Android /lib/sdk-common.jar file in the Android Studio installation directory, and restore this file to the original state when an incremental update is used
-Download the jar package
-Execute the command java-jar android-studio-cc-patch.jar < your sdk-common.jar file absolute path >
-Restart the Android Studio
+1. First, backup the plugins/ Android /lib/sdk-common.jar file in the Android Studio installation directory, and restore this file to the original state when an incremental update is used
+2. Download the jar package
+3. Execute the command java-jar android-studio-cc-patch.jar < your sdk-common.jar file absolute path >
+4. Restart the Android Studio
 
+Now, to feel the silky smooth Android Studio 🚀
