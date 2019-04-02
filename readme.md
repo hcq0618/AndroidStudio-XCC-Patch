@@ -19,6 +19,16 @@
 public.xml功能请参考[What is the use of the res/values/public.xml file on Android?](https://stackoverflow.com/questions/9348614/what-is-the-use-of-the-res-values-public-xml-file-on-android)
 ，如果你的项目使用了很多包含public.xml的依赖，不建议使用此补丁，使用时如果引用了依赖库的资源就需要人工主动判断引用的资源是否是public，编译后请务必在运行时仔细测试资源获取是否正常。
 
+The purpose of isKnown() method and isPublic() method are to find all resource names in the dependency tree of the current module, determine if they can be referenced, and submit the final visible resource to the IDE for auto-completion Suggestions. However, only 6 of the commonly used Android libraries that declare public.
+
+Therefore, the judgment of ignoring public condition has little influence.
+
+
+
+If your project uses a lot of dependencies that contain public.xml, it is not recommended to use this patch. If you refer to the resources of the dependent libraries, you need to manually determine whether the referenced resource is public.
+
+After compilation, be sure to test the resource acquisition carefully at run time.
+
 ## 使用方法
 
 如果你使用的macOS系统，那么恭喜你可以直接使用脚本运行：
@@ -36,4 +46,23 @@ bash android-studio-cc-auto-patch.sh
 4. 重启Android Studio
 
 好了，现在重新感受下如丝般顺滑的Android Studio吧 🚀
+
+
+If you are using macOS, then you can use the script to run:
+
+```shell
+curl -L https://github.com/mimers/AndroidStudio-XCC-Patch/raw/master/android-studio-cc-auto-patch.sh -o android-studio-cc-auto-patch.sh bash android-studio-cc-auto-patch.sh
+Then restart Android Studio.
+```
+
+To restore the original state, execute this script again to add the -u parameter, which is generally required when incremental update using Android Studio is used, and then patch again after the update is completed.
+
+
+
+If you are using another operating system, you will need to manually download the jar to execute:
+
+First, backup the plugins/ Android /lib/sdk-common.jar file in the Android Studio installation directory, and restore this file to the original state when an incremental update is used
+Download the jar package
+Execute the command java-jar android-studio-cc-patch.jar < your sdk-common.jar file absolute path >
+Restart the Android Studio
 
