@@ -41,7 +41,7 @@ bash android-studio-cc-auto-patch.sh
 
 如果你使用的是其他操作系统，则需要手动下载jar包执行：
 1. 首先备份Android Studio安装目录下的plugins/android/lib/sdk-common.jar文件，在使用增量更新方式时需要先恢复此文件到原始状态
-2. 下载jar包,(https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar)[https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar]
+2. 下载jar包,https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar
 3. 执行命令`java -jar android-studio-cc-patch.jar <你的sdk-common.jar文件绝对路径>`
 4. 重启Android Studio
 
@@ -62,7 +62,7 @@ To restore the original state, execute this script again to add the -u parameter
 If you are using another operating system, you will need to manually download the jar to execute:
 
 1. First, backup the plugins/ Android /lib/sdk-common.jar file in the Android Studio installation directory, and restore this file to the original state when an incremental update is used
-2. Download the jar package
+2. Download the jar package,https://github.com/mimers/AndroidStudio-XCC-Patch/releases/download/1.0/android-studio-cc-patch.jar
 3. Execute the command java-jar android-studio-cc-patch.jar < your sdk-common.jar file absolute path >
 4. Restart the Android Studio
 
